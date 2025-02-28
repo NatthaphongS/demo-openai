@@ -7,6 +7,7 @@ import { ProductsModule } from './modules/products/products.module';
 import { ProductsController } from './modules/products/products.controller';
 import { PrismaService } from './modules/shared/prisma/prisma.service';
 import { PrismaModule } from './modules/shared/prisma/prisma.module';
+import { OpenaiController } from './modules/shared/openai/openai.controller';
 
 @Module({
   imports: [
@@ -19,7 +20,7 @@ import { PrismaModule } from './modules/shared/prisma/prisma.module';
 
     ProductsModule,
   ],
-  controllers: [AppController, ProductsController],
+  controllers: [AppController, ProductsController, OpenaiController],
   providers: [],
 })
 export class AppModule {}
